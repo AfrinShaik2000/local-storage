@@ -1,0 +1,282 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    max-width: 700px;
+    /* border: 2px solid black; */
+    margin-left: auto;
+    margin-right: auto;
+    background-image:radial-gradient(#7F673D,#484E5E) ;
+    height: 100vh;
+    font-family: 'Roboto Slab', serif;
+}
+h1{
+    font-size: 50px;
+}
+p{
+    font-size: 20px;
+}
+header{
+    text-align: center;
+    background-color:#40608E ;
+    color: white;
+    padding: 20px;
+    line-height: 1.2;
+}
+form{
+    padding: 30px 0px;
+    background-color: white;
+}
+label{
+    font-size: 15px;
+    margin-left: 20px;
+}
+.line,.subline2,.address,.row3{
+    display: flex;
+}
+.email{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.line,.address,.al-2,.row3,.logo,.billing,.information{
+    margin-top: 20px;
+}
+
+input,select{
+    padding: 2px;
+}
+.start{
+    display: flex;
+    justify-content: space-between;
+}
+#table1,#table2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: none;
+}
+#email-input,#phone-input{
+    width: 60%;
+    margin-right: 4%;
+}
+.star{
+    color: red;
+}
+.line,.address{
+    justify-content: space-between;
+}
+
+.subline1,.phone{
+    width: 65%;
+}
+.texts{
+    padding-right: 30%;
+}
+select{
+    padding-right: 50%;
+}
+#general{
+    width: 69%;
+}
+#country-input{
+    width: 135%;
+}
+#website{
+    width: 40%;
+}
+#zip-input{
+    width: 99%;
+}
+.subline{
+    width: 65%;
+}
+.text{
+    padding-right: 55%;
+}
+.text1{
+    padding-right: 4%;
+}
+.s-line{
+    margin-right: 7%;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+}
+.row1{
+    display: flex;
+    margin-top: 20px;
+}
+.col3{
+    width: 35%;
+}
+.col5{
+    width: 56%;
+    position: relative;
+    display: flex;
+}
+.logos{
+    width: 100%;
+    padding: 8% 5%;
+    border-style:dashed;
+}
+.up-icon{
+    position: absolute;
+    right: 20px;
+    top:1.5em;
+    background-color: #F5F5F5;
+    padding: 10px;
+    border-radius: 50%;   
+}
+#uploads{
+    position: absolute;
+    margin-left: -6px;
+    opacity: 0; 
+}
+#input-date{
+    position: absolute;
+    top:-3em;
+    margin-left: 16%;
+    padding: 15px;
+    position: relative;
+    width: 25%;
+    opacity: 0;
+}
+#date{
+    color: rgb(221, 120, 120);
+}
+.calender label,.street label,.al-2 label,.s-line label{
+    margin-left: -1px;
+    color: #888888;
+}
+.billing{
+    display: flex;
+    justify-content: space-between;
+}
+.calender{
+    width: 65%;
+}
+.information{
+    display: flex;
+    gap: 12.5%;
+}
+.btn{
+    text-align: center;
+    margin-top: 40px;
+}
+button{
+    padding: 5px 20px;
+    background-color:#4C96E0 ;
+    color: white;
+    border: none;
+}
+input:hover,select:hover,textarea:hover{
+    box-shadow: 1px 1px 2px 1px skyblue;
+    border: #4C96E0;
+}
+#finalDate{
+    position: absolute;
+    /* margin-top: -10px; */
+    margin-left: -16%;
+}
+#error{
+    position: absolute;
+    margin-top: -25px;
+}
+pre{
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+}
+table{
+    margin-top: 30px;
+    background-color: white;
+    border: 2px solid orangered;
+}
+th{
+    padding: 20px;
+    color:purple;
+    background-color: darksalmon;
+}
+tbody{
+    background-color: white;
+    color: teal;
+    text-align: center;
+    font-size: 18px;
+}
+#display{
+    display: none;
+}
+
+
+
+@media (min-width:300px) and (max-width:600px){
+    .start,.line,.address,.row3,.row1,.billing,.information,.email{
+        flex-direction: column;
+    }
+    .subline1,.phone,.address,.col5,.calender,textarea{
+        margin-left: 20px;
+    }
+    form{
+        margin: auto;
+        /* border: 2px solid black; */
+        padding: 18px;
+    }
+    .s-line,.phone,.subline{
+        margin-top: 10px;
+    }
+    #upload{
+        background-color: #40608E;
+        border-radius: 50%;
+        padding: 12px;
+        right: 0.5em;
+    }
+    #uploads{
+        opacity: 0;
+        position: absolute;
+        width: 50px;
+        right: 0.3em;
+        padding: 10px;
+    }
+    #client,#second{
+        width: 100%;
+    }
+    #general{
+        width: 132%;
+    }
+    #align{
+        margin: auto;
+    }
+    .text{
+        width: 90%;
+    }
+    .text1{
+        width: 152%;
+    }
+    #zip-input{
+        width: 154%;
+    }
+    #country-input{
+        width: 158%;
+    }
+    #website{
+        width: 107%;
+    }
+    .col5{
+        width: 90%;
+        height: 100px;
+    }
+    .time{
+        width: 80%;
+    }
+    .phone{
+        margin: 10px 20px;
+    }
+    #finalDate{
+        margin-left:-32%;
+    }
+    
+}

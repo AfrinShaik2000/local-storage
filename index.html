@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Client Details</h1>
+        <p>Enter the details of all incoming clients.</p>
+    </header>
+    <form name="myform">
+        <div class="start">
+            <div class="line1">
+                <label for="client">Client Name</label>
+                <span class="star">*</span>
+            </div>
+            <div class="subline1" name="subline1" id="first">
+                <input type="text" class="texts" id="client" name="client" minlength="5" maxlength="50" required autofocus>
+                <pre id="clients"></pre>
+            </div>
+        </div>
+        <div class="line">
+            <div class="line1">
+                <label for="second">Company</label>
+                <span class="star">*</span>
+            </div>
+            <div class="subline1" id="line-company">
+                <input type="text" id="second" class="texts" minlength="5" maxlength="50" required>
+                <pre id="seconds"></pre>
+            </div>
+        </div>
+        <div class="line">
+            <div class="line1">
+                <label for="general">Department</label>
+                <span class="star">*</span>
+            </div>
+            <div class="subline1">
+                <select id="general" required>
+                    <option value="">--Select--</option>
+                    <option value="General Management">General Management</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="operations">operations</option>
+                    <option value="finance">Finance</option>
+                    <option value="sales">Sales</option>
+                </select>
+                <pre id="demo"></pre>
+            </div>
+        </div>
+        <div class="email">
+            <div class="name">
+                <label>Preferred Contact Method</label>
+                <span class="star">*</span>
+            </div>
+            <div class="phone"  onclick="department()" required>
+                <input type="radio" name="any" onclick="email()" required>Email
+                <input type="radio" name="any" onclick="phone()" required>Phone
+                <pre id="vvalue"></pre>
+            </div>
+        </div>
+        <div id="table1">
+            <label>Email</label>
+            <span class="star">*</span>
+            <input type="email" id="email-input" required>
+        </div>
+        <div id="table2">
+            <label>Phone</label>
+            <span class="star">*</span>
+            <input type="number" id="phone-input" required>
+            <pre id="p-none"></pre>
+        </div>
+        <div class="address">
+            <div class="line1">
+                <label for="c-a" id="align">Company Address</label>
+                <span class="star">*</span>
+            </div>
+            <div class="subline">
+                <div class="street">
+                    <input type="text" class="text" id="line2" required><br>
+                    <label>Street Address</label>
+                </div>
+                <pre id="streetaddress"></pre>
+                <div class="al-2">
+                    <input type="text" class="text" id="line3" required><br>
+                    <label>Address Line 2</label>
+                </div>
+                <pre id="addressline2"></pre>
+                <div class="row3">
+                    <div class="s-line">
+                        <input type="text" class="text1" id="line4" required><br>
+                        <label>City</label>
+                        <pre id="city"></pre>
+                    </div>
+                    <div class="s-line">
+                        <input type="text" class="text1" id="line5" required><br>
+                        <label>State/Region/Province</label>
+                        <pre id="region"></pre>
+                    </div>
+                </div>
+                <div class="row3">
+                    <div class="s-line">
+                        <input type="text" id="line6" class="text1" pattern="\d{6}" required id="zip-input"><br>
+                        <label>Postel / Zip Code</label>
+                        <pre id="postel"></pre>
+                    </div>
+                    <div class="s-line">
+                        <div class="selection">
+                            <select id="country-input" required>
+                                <option value="">--Select--</option>
+                                <Option value="Australia">Australia</Option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Canada">Canada</option>
+                                <option value="India">India</option>
+                            </select>
+                            <label>Country</label>
+                        </div>
+                        <pre id="count"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line">
+            <div class="line1">
+                <label for="website">Company Website</label>
+                <span class="star">*</span>
+            </div>
+            <div class="subline1">
+                <input type="url" class="texts" id="website" onclick="addressline6()" required >
+                <pre id="newemail"></pre>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="col3">
+                <label for="logos">Company logo</label>
+            </div>
+            <div class="col5">
+                <input type="text" placeholder="Choose File" class="logos">
+                <div class="up-icon">
+                    <input type="file" id="uploads">
+                    <i class="fa-sharp fa-solid fa-arrow-up-from-bracket" id="upload"></i>
+                </div>
+            </div>
+        </div>
+        <div class="billing" onclick="validations()">
+            <div class="cycle">
+                <label for="bill">Billing Cycle</label>
+                <span class="star">*</span>
+            </div>
+            <div class="calender">
+                <input type="text" class="time" id="bill" required>
+                <i class="fa-sharp fa-solid fa-calendar" id="date"></i><br>
+                <input type="date" id="input-date" min="2022-10-2022" onchange="calenderfunction()">
+                <label class="year" id="finalDate">dd-MM-yyyy</label>
+                <pre id="error"></pre>
+            </div>
+        </div>
+        <div class="information">
+            <label for="add">Additional Information</label>
+            <div>
+            <textarea row="10" col="10" maxlength="200" id="add" onclick="lastrow()" required ></textarea>
+            <pre id="lastdata"></pre>
+            </div>
+        </div>
+        <div class="btn">
+        <button type="submit" id="submit" onclick="submitfunction()">Submit</button>
+        </div>
+    </form>
+    <table id="display">
+        <tr>
+            <thead>
+                <th>Client Name</th>
+                <th>Company</th>
+                <th>Department</th>
+                <th>Email/Phone</th>
+                <th>Company Address</th>
+                <th>Billing Cycle</th>
+            </thead>
+        </tr>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+    <script type="text/Javascript" src="java.js"></script>
+</body>
+</html>
