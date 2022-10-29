@@ -45,7 +45,8 @@ label{
 }
 
 input,select{
-    padding: 2px;
+    padding: 4px;
+    /* border-color: rgb(171, 173, 175); */
 }
 .start{
     display: flex;
@@ -82,7 +83,7 @@ select{
     width: 69%;
 }
 #country-input{
-    width: 135%;
+    width: 149%;
 }
 #website{
     width: 40%;
@@ -94,13 +95,13 @@ select{
     width: 65%;
 }
 .text{
-    padding-right: 55%;
+    padding-right: 58%;
 }
 .text1{
-    padding-right: 4%;
+    padding-right: 15%;
 }
 .s-line{
-    margin-right: 7%;
+    margin-right: 8%;
 }
 .logo{
     display: flex;
@@ -177,9 +178,11 @@ input:hover,select:hover,textarea:hover{
     box-shadow: 1px 1px 2px 1px skyblue;
     border: #4C96E0;
 }
+input:focus{
+    outline: 0;
+}
 #finalDate{
     position: absolute;
-    /* margin-top: -10px; */
     margin-left: -16%;
 }
 #error{
@@ -251,19 +254,22 @@ tbody{
         margin: auto;
     }
     .text{
-        width: 90%;
+        width: 80%;
     }
     .text1{
-        width: 152%;
+        width: 135%;
+    }
+    .line6{
+        width: 100%;
     }
     #zip-input{
         width: 154%;
     }
     #country-input{
-        width: 158%;
+        width: 155%;
     }
     #website{
-        width: 107%;
+        width: 104%;
     }
     .col5{
         width: 90%;
