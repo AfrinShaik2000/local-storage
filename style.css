@@ -183,7 +183,11 @@ input:focus{
 }
 #finalDate{
     position: absolute;
-    margin-left: -16%;
+    /* border: 2px solid black; */
+    margin-top: -50px;
+    /* width: 50%; */
+    /* float: left; */
+    /* margin-left: -16%; */
 }
 #error{
     position: absolute;
@@ -266,13 +270,13 @@ tbody{
         width: 154%;
     }
     #country-input{
-        width: 155%;
+        width: 153%;
     }
     #website{
-        width: 104%;
+        width: 100%;
     }
     .col5{
-        width: 90%;
+        width: 87%;
         height: 100px;
     }
     .time{
@@ -280,9 +284,6 @@ tbody{
     }
     .phone{
         margin: 10px 20px;
-    }
-    #finalDate{
-        margin-left:-32%;
     }
     
 }
