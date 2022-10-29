@@ -60,8 +60,8 @@ input,select{
     display: none;
 }
 #email-input,#phone-input{
-    width: 60%;
-    margin-right: 4%;
+    width: 60.9%;
+    margin-right: 2.5%;
 }
 .star{
     color: red;
