@@ -9,7 +9,7 @@ document.getElementById("email-input").addEventListener("focusout",emailfunction
 document.getElementById("phone-input").addEventListener("focusout",phonefunction);
 document.getElementById("country-input").addEventListener("focusout",selectfunction);
 document.getElementById("add").addEventListener("focusout",lastrow);
-document.getElementById("submit").addEventListener("focusout",submitfunction);
+// document.getElementById("submit").addEventListener("focusout",submitfunction);
 
 
 function myfunction(){
@@ -218,6 +218,7 @@ function lastrow(){
 
 
 
+
 function submitfunction(){
 
     n = document.getElementById("client").value;
@@ -228,30 +229,14 @@ function submitfunction(){
     ca = document.getElementById("line2").value;
     bc = document.getElementById("bill").value;
 
-    if(n=="" || c=="" ||d=="" || ca=="" ||bc==""){
-        alert("enter the full details");
-    }
-    else{
-        var display = document.getElementById('display');
-        var newRow = display.insertRow(display.length);
-    
-        var cell0 = newRow.insertCell(0);
-        cell0.innerHTML = n;
-        var cell1 = newRow.insertCell(1);
-        cell1.innerHTML = c;
-        var cell2 = newRow.insertCell(2);
-        cell2.innerHTML = d;
-        var cell3 = newRow.insertCell(3);
-        cell3.innerHTML = (em+ph);
-        var cell4 = newRow.insertCell(4);
-        cell4.innerHTML = ca;
-        var cell5 = newRow.insertCell(5);
-        cell5.innerHTML = bc;
-    }
     document.getElementById("display").style.display="block";
-
     let userarray = new Array();
     userarray=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+    if (userarray.some((v)=>{return v.Email==em})){
+        alert("Enter new data");
+        return;
+    }
+    else{
     userarray.push({
         fullname:n,
         CompanyName:c,
@@ -263,4 +248,26 @@ function submitfunction(){
 
     })
     localStorage.setItem("users",JSON.stringify(userarray));
+}
+if(n=="" || c=="" ||d=="" || ca=="" ||bc==""){
+    alert("enter the full details");
+}
+else{
+    var display = document.getElementById('display');
+    var newRow = display.insertRow(display.length);
+
+    var cell0 = newRow.insertCell(0);
+    cell0.innerHTML = n;
+    var cell1 = newRow.insertCell(1);
+    cell1.innerHTML = c;
+    var cell2 = newRow.insertCell(2);
+    cell2.innerHTML = d;
+    var cell3 = newRow.insertCell(3);
+    cell3.innerHTML = (em+ph);
+    var cell4 = newRow.insertCell(4);
+    cell4.innerHTML = ca;
+    var cell5 = newRow.insertCell(5);
+    cell5.innerHTML = bc;
+}
+
 }
