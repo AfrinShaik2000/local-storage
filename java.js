@@ -21,7 +21,6 @@ function myfunction(){
     else if (letter.test(x)){
         document.getElementById("clients").innerHTML="";
         document.getElementById("client").style.borderBlockColor="green";
-        // document.getElementById("clients").style.color="green";
     }else{
         document.getElementById("clients").innerHTML="only Alphabets and must be minimum 5 to 50 characters";
         document.getElementById("client").style.borderBlockColor="red";
